@@ -52,11 +52,8 @@ spec:
   - host: confluence.icoastline.cn
     http:
       paths:
-      - path: /confluence
+      - path: /
         backend:
           serviceName: confluence
           servicePort: 8090
-      - path: /synchrony
-        backend:
-          serviceName: confluence
-          servicePort: 8091    
+     
