@@ -45,8 +45,6 @@ spec:
 apiVersion: extensions/v1beta1
 kind: Ingress
 metadata:
-  annotations:
-    ingress.kubernetes.io/rewrite-target: /
   name: confluence
   namespace: default
 spec:
@@ -54,7 +52,11 @@ spec:
   - host: confluence.icoastline.cn
     http:
       paths:
-      - path: /
+      - path: /confluence
         backend:
           serviceName: confluence
           servicePort: 8090
+       - path: /synchrony
+        backend:
+          serviceName: confluence
+          servicePort: 8091    
