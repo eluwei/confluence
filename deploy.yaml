@@ -56,7 +56,7 @@ spec:
         backend:
           serviceName: confluence
           servicePort: 8090
-       - path: /synchrony
+      - path: /synchrony
         backend:
           serviceName: confluence
           servicePort: 8091    
