@@ -12,7 +12,7 @@ spec:
         env: test
     spec:
       containers:
-       - name: confluence
+      - name: confluence
         image: registry.dev.com:5000/icoastline/confluence:IMAGE_VERSION
         volumeMounts:
           - mountPath: /var/atlassian/application-data/confluence
