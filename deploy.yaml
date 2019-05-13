@@ -13,7 +13,7 @@ spec:
     spec:
       containers:
       - name: confluence
-        image: registry.dev.com:5000/icoastline/confluence:6.6
+        image: icoastline/confluence:6.6
         volumeMounts:
           - mountPath: /var/atlassian/application-data/confluence
             name: local-home
