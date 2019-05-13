@@ -13,7 +13,7 @@ spec:
     spec:
       containers:
       - name: confluence
-        image: registry.dev.com:5000/icoastline/confluence:IMAGE_VERSION
+        image: registry.dev.com:5000/icoastline/confluence:6.6
         volumeMounts:
           - mountPath: /var/atlassian/application-data/confluence
             name: local-home
@@ -27,10 +27,10 @@ spec:
       volumes:
         - name: local-home
           hostPath :
-            path : /home/data/dev/confluence
+            path : /media/grid/G/dockerdatas/confluence
         - name: confluence-log
           hostPath: 
-            path : /home/data/dev/confluence/confluence-logs   
+            path : /media/grid/G/dockerdatas/confluence/confluence-logs   
 ---
 kind: Service
 apiVersion: v1
